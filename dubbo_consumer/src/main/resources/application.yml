@@ -1,0 +1,10 @@
+#web端口
+server:
+  port: 8002
+#dubbo
+dubbo:
+  protocol:
+    prot: -1
+    name: dubbo
+  application:
+    name: consumer_1
