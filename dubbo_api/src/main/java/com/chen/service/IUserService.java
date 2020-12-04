@@ -1,5 +1,7 @@
 package com.chen.service;
 
+import com.chen.entity.User;
+
 /**
  * @author chenlong
  * @version 1.0
@@ -7,5 +9,5 @@ package com.chen.service;
  * @date
  */
 public interface IUserService {
-    int count();
+    User login();
 }

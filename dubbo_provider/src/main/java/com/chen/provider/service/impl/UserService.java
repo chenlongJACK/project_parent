@@ -1,6 +1,7 @@
 package com.chen.provider.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.chen.entity.User;
 import com.chen.service.IUserService;
 
 /**
@@ -12,7 +13,8 @@ import com.chen.service.IUserService;
 @Service
 public class UserService implements IUserService {
     @Override
-    public int count() {
-        return 0;
+    public User login() {
+        User user=new User("jack","jack","123456");
+        return user;
     }
 }
