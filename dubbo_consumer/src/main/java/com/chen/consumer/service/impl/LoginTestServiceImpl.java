@@ -20,6 +20,6 @@ public class LoginTestServiceImpl implements LoginTestService {
 
     @Override
     public void login() {
-
+        System.out.println(userService.login());
     }
 }

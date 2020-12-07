@@ -1,0 +1,15 @@
+server:
+  port: 8003
+#dataSource
+spring:
+  datasource:
+    #zeroDateTimeBehavior:将数据库中是“0000-00-00 00:00:00”的日期在转化java对象时转为null
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+
+#mybatis
+mybatis:
+  type-aliases-package: com.chen.entity
+  mapper-locations: classpath:/com/chen/user/mapper/*.xml

@@ -1,5 +1,6 @@
 package com.chen.entity;
 
+import javax.xml.crypto.Data;
 import java.io.Serializable;
 
 /**
@@ -9,16 +10,21 @@ import java.io.Serializable;
  * @date
  */
 public class User implements Serializable {
-
+    private String id;
     private String name;
+    private Integer age;
+    private Data birthDay;
     private String userName;
     private String passWord;
 
     public User() {
     }
 
-    public User(String name, String userName, String passWord) {
+    public User(String id, String name, Integer age, Data birthDay, String userName, String passWord) {
+        this.id = id;
         this.name = name;
+        this.age = age;
+        this.birthDay = birthDay;
         this.userName = userName;
         this.passWord = passWord;
     }
@@ -47,10 +53,37 @@ public class User implements Serializable {
         this.passWord = passWord;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public Data getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(Data birthDay) {
+        this.birthDay = birthDay;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", birthDay=" + birthDay +
                 ", userName='" + userName + '\'' +
                 ", passWord='" + passWord + '\'' +
                 '}';

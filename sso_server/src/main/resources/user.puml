@@ -1,0 +1,7 @@
+@startuml
+Alice -> system: Authentication Request
+system --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+@enduml
